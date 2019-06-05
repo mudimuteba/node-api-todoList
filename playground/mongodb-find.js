@@ -8,7 +8,6 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', { useNewUrlParser: true
     
     console.log('Connected to MongoDB server');
     const db = client.db('TodoApp');
-
     
     // db.collection('Todos').find({
     //     _id: new ObjectID('5cf4faead0a32824a9077d0a')
@@ -27,8 +26,8 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', { useNewUrlParser: true
     db.collection('Users').find({name: 'HotSauce'}).toArray().then( (docs) => {
         console.log('HotSauce\'s todos:\n', JSON.stringify(docs, null, 4));
     }, (err) => {
-        console.log('Unable to fetch todos. Error message:', err);
+        console.log('Unable to fetch users. Error message:', err);
     });
 
-    //client.close();
+    client.close();
 });
