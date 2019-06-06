@@ -32,6 +32,9 @@ app.listen(PORT, () => {
     console.log(`Started on port ${PORT}`);
 });
 
+// set the app property equal to the app variable
+module.exports = {app};
+
 // var user_Mudi = new User({
 //     email: 'mudi.muteba@gmail.com'
 // });
