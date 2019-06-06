@@ -18,7 +18,7 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', { useNewUrlParser: true
 
     db.collection('Todos').insertOne(
         {
-            text: 'A thing',
+            text: 'Eat frogs',
             Completed: false
         }, (err, result) => {
         if (err)
