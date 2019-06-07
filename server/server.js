@@ -12,7 +12,7 @@ const {User} = require('./models/user.js');
 
 
 const app = express();
-const PORT = 5000;
+const port = process.env.PORT || 5000;
 
 app.use(bodyParser.json());
 
@@ -61,8 +61,8 @@ app.get('/todos/:id', (req, res) => {
     });
 });
 
-app.listen(PORT, () => {
-    console.log(`Started on port ${PORT}`);
+app.listen(port, () => {
+    console.log(`Started on port ${port}`);
 });
 
 // set the app property equal to the app variable
